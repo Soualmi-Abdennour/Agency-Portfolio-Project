@@ -1,0 +1,13 @@
+.companies {
+    padding-bottom: 5rem;
+    .image-holder {
+        height:50px;
+        margin: 0 auto 2rem;
+        img {
+            height: 100%;
+            &:hover {
+                filter: grayscale(120);
+            }
+        }
+    }
+}

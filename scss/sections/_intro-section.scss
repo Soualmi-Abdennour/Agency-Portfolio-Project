@@ -1,0 +1,38 @@
+@use '../components/mixins' as *;
+@use '../custom' as *;
+.intro {
+    @include gradientBackground;
+    padding-top: 10rem;
+
+    .illustrator-box {
+    
+        a {
+            @include absoluteCenter;
+
+            .play-btn {
+                border-radius: 50%;
+                i {
+                    font-size: 6rem;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    border: 0.55rem solid $white;
+
+    &-border-1 {
+        animation: pusle-border 1.5s 1s linear  infinite ;
+    }
+    &-border-2 {
+        animation: pusle-border 1.5s 1.5s linear  infinite ;
+    }
+}

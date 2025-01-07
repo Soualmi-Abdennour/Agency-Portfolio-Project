@@ -1,0 +1,59 @@
+@use '../custom' as *;
+@use './mixins' as *;
+.display-2 {
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+    
+    #{&}-title {
+        text-transform: capitalize;
+        font-weight: 700;
+        color: $white;
+    }
+    #{&}-paragraph {
+        font-size: 1rem;
+        color: $white;
+        margin-top: 1.2rem;
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// main heading for the sections 
+.main-heading {
+    position: relative;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 10rem;
+        height: 0.1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -1.25rem;
+        background-color: $primary;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        width: 2rem;
+        height: 0.7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -1.96rem;
+        background-color: $primary;
+    }
+}
+
+// border left style 
+.border-left {
+    border-left: 0.1rem solid $gray-300;
+    height: 100%;
+}
+
+
+
+

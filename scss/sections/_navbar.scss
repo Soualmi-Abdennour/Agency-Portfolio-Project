@@ -1,0 +1,11 @@
+@use '../components/mixins' as *;
+
+.menu {
+    @include gradientBackground;
+    li {
+        padding: 0 0.7rem;
+        a {
+            font-weight: 600;
+        }
+    }
+}
